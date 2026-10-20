@@ -1,0 +1,43 @@
+dsh-screen-use
+==============
+
+MIT License (see the SPDX-style grant below).
+
+The native Win32/GDI helpers in `src/` (`win32.cjs`, `capture.cjs`,
+`png.cjs`) and the module-resolution helper in `lib/loader.cjs` are adapted
+from the MIT-licensed project:
+
+  dsh-computer-use — https://github.com/EvangeliMo/dsh-computer-use
+  Copyright (c) the dsh-computer-use contributors
+
+Changes in this package: error prefixes renamed to dsh-screen-use, an
+`GetAsyncKeyState` binding plus `escapeDown` / `anyMouseButtonDown` probes
+added for the Escape kill switch and takeover detection, and the files were
+otherwise left structurally intact so their documented coordinate-space and
+PNG-encoding invariants still hold.
+
+Everything else — the shared-pointer runtime, the gates, the token policy, the
+tools, the prompt section, the HTTP face and the floating panel — is original
+work for dsh-screen-use.
+
+---
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

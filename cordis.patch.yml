@@ -1,0 +1,27 @@
+# dsh-screen-use bundle patch.
+#
+# One host-plane row: the Host half registers the `screen` / `screen_batch`
+# tools, the screen-use policy prompt section, and the panel's HTTP routes; the
+# Client half (package.json `dsh.client`) renders the floating panel into
+# `shell.overlay`.
+#
+# Deliberately NOT an agent preset. The Web app mounts tools per session through
+# a preset, but a global registration in the Host layer is visible to every
+# agent, which is what this plugin wants: the panel must work in whatever session
+# the user is already in, without asking them to switch modes.
+#
+# The two gates below are defaults only; the panel owns the runtime switches and
+# always starts with both OFF, so a restart never inherits a capture loop.
+- insert:
+    - id: screen-use
+      name: 'dsh-screen-use'
+      config:
+        enabled: true
+        # Token lever: a whole desktop is an overview. Detail comes from an
+        # explicit `region`, captured natively up to nativeMaxDimension.
+        overviewMaxDimension: 1024
+        nativeMaxDimension: 1400
+        pngLevel: 6
+        minCaptureIntervalMs: 800
+        maxCapturesPerMinute: 24
+        outputDirectory: ''

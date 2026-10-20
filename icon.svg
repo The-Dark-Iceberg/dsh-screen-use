@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="dsh-screen-use">
+  <defs>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f8fe0"/>
+      <stop offset="1" stop-color="#155a9c"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+
+  <!-- monitor -->
+  <rect x="6" y="10" width="52" height="36" rx="7" fill="url(#screen)"/>
+  <rect x="6" y="10" width="52" height="36" rx="7" fill="url(#glass)"/>
+  <rect x="6.75" y="10.75" width="50.5" height="34.5" rx="6.25" fill="none" stroke="#0d3a66" stroke-opacity="0.55" stroke-width="1.5"/>
+
+  <!-- coordinate crosshair -->
+  <g stroke="#eaf5ff" stroke-opacity="0.55" stroke-width="1.2" stroke-linecap="round">
+    <path d="M30 20v9M30 34v6M38 25h-9M22 25h-6"/>
+  </g>
+  <circle cx="30" cy="25" r="2.1" fill="#eaf5ff" fill-opacity="0.9"/>
+
+  <!-- stand -->
+  <rect x="26" y="46" width="12" height="4" rx="1.6" fill="#0d3a66" fill-opacity="0.75"/>
+  <rect x="19" y="50" width="26" height="4" rx="2" fill="#0d3a66" fill-opacity="0.9"/>
+
+  <!-- shared pointer -->
+  <path d="M35.5 27.5 L50 36.2 L43.4 38.4 L46.6 45.2 L42.8 46.9 L39.6 40.1 L35 44.3 Z"
+        fill="#ffffff" stroke="#0d3a66" stroke-width="1.6" stroke-linejoin="round"/>
+
+  <!-- stop badge -->
+  <circle cx="50.5" cy="14.5" r="6.4" fill="#e5484d"/>
+  <circle cx="50.5" cy="14.5" r="6.4" fill="none" stroke="#ffffff" stroke-opacity="0.45" stroke-width="1"/>
+  <rect x="47.6" y="12.4" width="5.8" height="4.2" rx="1" fill="#ffffff"/>
+</svg>
